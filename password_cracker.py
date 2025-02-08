@@ -1,4 +1,3 @@
-
 def password_cracker(file_name):
     for i in range(32,127):
         password = chr(i)
