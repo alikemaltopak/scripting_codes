@@ -431,3 +431,5 @@ else:
             print(see_dep_arangement("/Users/alikemaltopak/Library/CloudStorage/OneDrive-Kişisel/VSCODE_PY/exam.txt"))          # Here
         else:
             break
+
+        print("ali keml topak")
