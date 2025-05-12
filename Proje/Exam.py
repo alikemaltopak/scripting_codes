@@ -5,7 +5,7 @@ if os.path.exists(txt_name) != True:
 
     with open(txt_name,"w") as txt:
 
-        with pdfplumber.open("/Users/alikemaltopak/Library/CloudStorage/OneDrive-Kişisel/VSCODE_PY/Grade_Lists_midterm1.pdf") as pdf:        # Pdf name or path
+        with pdfplumber.open("/Users/alikemaltopak/Library/CloudStorage/OneDrive-Kişisel/VSCODE_PY/Math142_Grade_Lists (1-2).pdf") as pdf:        # Pdf name or path
             for page in pdf.pages:
                 text = page.extract_text()
                 if text:
@@ -339,6 +339,7 @@ else:
                 liste = line.split()
                 try:
                     grades = liste[1]
+                    #grades = liste[2]        second row
                 except Exception:
                     grades = "not available because of did'n join the exam."
                 try: 
@@ -358,6 +359,7 @@ else:
                 stdnum = liste[0]
                 try:
                     grade = liste[1]
+                    #grade = liste[2]      second row
                 except Exception:
                     grade = "not available because of did'n join the exam."
                 if std_ID == stdnum:
@@ -382,6 +384,7 @@ else:
                 liste = line.split()
                 try:
                     grades = int(liste[1])
+                    # see_yourgrade grade = liste[2] yap sonra grades = int(liste[2]) yap
                 except Exception:
                     grades = 0
                 if finde_grade <= int(grades):
@@ -401,7 +404,8 @@ else:
                 newstdID = stdID.replace(stdID,seperate_stdID).split(",")
                 dprtcode = newstdID[1]
                 try:
-                    grades = liste[1] 
+                    grades = liste[1]
+                    # see_yourgrade grade = liste[2] yap sonra grade = liste[2] yap
                 except Exception:
                     grades = 0
                 if std_dprt_input == dprtcode and finde_grade <= int(grades):
